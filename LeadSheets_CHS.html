@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>主旋律谱版</title>
+<style>
+div {
+  resize: horizontal;
+  overflow: auto;
+  border: 1px solid;
+  display: inline-flex;
+  height: 90vh;
+}
+</style>
+</head>
+<body>
+<h1>主旋律谱版</h1>
+<p><a href="https://www.jw.org/cmn-hans/%E5%A4%9A%E5%AA%92%E4%BD%93%E5%9B%BE%E4%B9%A6%E9%A6%86/%E9%9F%B3%E4%B9%90/%E5%8E%9F%E5%88%9B%E6%AD%8C%E6%9B%B2/" target="_blank">JW.ORG原创歌曲</a></p>
+<div><ul id="titlelist"></ul></div>
+<div id="display" style="position: absolute; top: 100px; width: 70vw"></div>
+<script>
+var songlist = [
+['1014294_CHS_cnt_1.pdf','最棒的生活方式'],
+//['1014296_CHS_cnt_1.pdf','We Won’t Forget You'],
+['1014316_CHS_cnt_1.pdf','手拉车看世界'],
+['1014290_CHS_cnt_1.pdf','最重要的事'],
+['1014288_CHS_cnt_1.pdf','永不放弃'],
+['1014300_CHS_cnt_1.pdf','献上最好的荣耀耶和华'],
+['1014284_CHS_cnt_1.pdf','将我的全部献给你'],
+['1014280_CHS_cnt_1.pdf','我不妥协'],
+['1014302_CHS_cnt_1.pdf','把握现在'],
+['1014282_CHS_cnt_1.pdf','微笑的力量'],
+['1014278_CHS_cnt_1.pdf','寻找宝藏'],
+//['1014292_CHS_cnt_1.pdf','Jehovah Welcomes You Home'],
+['1014274_CHS_cnt_1.pdf','欢乐的大会'],
+['1014276_CHS_cnt_1.pdf','献上最珍贵的'],
+//['1014286_CHS_cnt_1.pdf','Take Your Time, Choose Wisely'],
+['1014272_CHS_cnt_1.pdf','想象有一天'],
+//['1014267_CHS_cnt_1.pdf','Keep the Pace'],
+['1014263_CHS_cnt_1.pdf','学习新语言的福分'],
+['1014265_CHS_cnt_1.pdf','别太匆忙'],
+['1014256_CHS_cnt_1.pdf','实践慷慨之道'],
+['1014244_CHS_cnt_1.pdf','献上感谢'],
+['1014238_CHS_cnt_1.pdf','我的归属'],
+['1014240_CHS_cnt_1.pdf','抉择'],
+['1014223_CHS_cnt_1.pdf','彼此乐意宽恕'],
+['1014225_CHS_cnt_1.pdf','转角不远处'],
+['1014229_CHS_cnt_1.pdf','研读巩固你信心'],
+['1014226_CHS_cnt_1.pdf','你的话语永远长存'],
+['1014214_CHS_cnt_1.pdf','静下来、想一想、作祷告'],
+['1014215_CHS_cnt_1.pdf','与耶和华一起，为将来建立美好根基'],
+['1014227_CHS_cnt_1.pdf','信心带来美事'],
+['1014216_CHS_cnt_1.pdf','牢牢记住你的提醒'],
+['1014217_CHS_cnt_1.pdf','你使我振作'],
+['1014218_CHS_cnt_1.pdf','赞叹王国的非凡成就'],
+['1014220_CHS_cnt_1.pdf','宝贝女儿'],
+['1014219_CHS_cnt_1.pdf','行动起来'],
+['1014232_CHS_cnt_1.pdf','抬起头'],
+['1014231_CHS_cnt_1.pdf','我为你歌唱'],
+['1014242_CHS_cnt_1.pdf','重要的事'],
+['1014234_CHS_cnt_1.pdf','永远爱你'],
+['1014236_CHS_cnt_1.pdf','你的荣耀之家'],
+['1014246_CHS_cnt_1.pdf','信赖你'],
+['1014248_CHS_cnt_1.pdf','改变'],
+['1014250_CHS_cnt_1.pdf','我不孤单'],
+['1014254_CHS_cnt_1.pdf','弟兄之爱'],
+['1014252_CHS_cnt_1.pdf','不要害怕'],
+['1014258_CHS_cnt_1.pdf','追寻'],
+['1014260_CHS_cnt_1.pdf','真朋友'],
+['1014304_CHS_cnt_1.pdf','好朋友，我会陪你走'],
+['1014298_CHS_cnt_1.pdf','我们永远是一家人'],
+['1014269_CHS_cnt_1.pdf','请赐我勇气'],
+['1014306_CHS_cnt_1.pdf','我愿为你付出一切'],
+['1014309_CHS_cnt_1.pdf','过好每一天'],
+['1014307_CHS_cnt_1.pdf','要勇敢坚强'],
+['1014311_CHS_cnt_1.pdf','感谢上帝的奇妙作为'],
+['1014313_CHS_cnt_1.pdf','天涯若比邻'],
+['1014318_CHS_cnt_1.pdf','我陪你战胜世界'],
+['1014321_CHS_cnt_1.pdf','耶和华永远在身边'],
+['1014323_CHS_cnt_1.pdf','盼望美丽乐园'],
+['1014324_CHS_cnt_1.pdf','我愿献出一生'],
+['1014320_CHS_cnt_1.pdf','永恒的爱'],
+['1014325_CHS_cnt_1.pdf','交托给他'],
+['1014327_CHS_cnt_1.pdf','就像个小孩'],
+['1014328_CHS_cnt_1.pdf','深深相信'],
+['1014337_CHS_cnt_1.pdf','甘心宽恕'],
+['1014326_CHS_cnt_1.pdf','向前跑'],
+['1014338_CHS_cnt_1.pdf','坚持到底'],
+['1014333_CHS_cnt_1.pdf','你是唯一'],
+['1014346_CHS_cnt_1.pdf','守护我心'],
+['1014343_CHS_cnt_1.pdf','欢欣快乐'],
+['1014345_CHS_cnt_1.pdf','精诚团结'],
+['1014355_CHS_cnt_1.pdf','善用青春赞美耶和华'],
+['1014339_CHS_cnt_1.pdf','让我永远欢欣'],
+['1014344_CHS_cnt_1.pdf','你会看见'],
+['1014354_CHS_cnt_1.pdf','我有信心']
+]
+
+var display = document.getElementById("display")
+var titlelist = document.getElementById("titlelist")
+
+function show(filename) {
+  display.innerHTML = "<object data=\"" + filename + "#view=FitH\" type=\"application/pdf\" width=\"100%\" height=\"100%\">"
+}
+
+for (i = 0; i < songlist.length; i++) {
+  titlelist.innerHTML += "<li><button onClick=\"show('" + songlist[i][0] + "')\">" + songlist[i][1] + "</button></li>"
+}
+
+show(songlist[0][0])
+</script>
+</body>
+<html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>악보</title>
+<style>
+div {
+  resize: horizontal;
+  overflow: auto;
+  border: 1px solid;
+  display: inline-flex;
+  height: 90vh;
+}
+</style>
+</head>
+<body>
+<h1>악보</h1>
+<p><a href="https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/music-songs/%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90%EC%86%A1/" target="_blank">JW.ORG 오리지널송</a></p>
+<div><ul id="titlelist"></ul></div>
+<div id="display" style="position: absolute; top: 100px; width: 70vw"></div>
+<script>
+var songlist = [
+//['1014294_KO_cnt_1.pdf','The Best Life Ever'],
+//['1014296_KO_cnt_1.pdf','We Won’t Forget You'],
+['1014316_KO_cnt_1.pdf','나와 함께 가 볼까?'],
+//['1014290_KO_cnt_1.pdf','What Means the Most to Me'],
+//['1014288_KO_cnt_1.pdf','Never Give Up'],
+['1014300_KO_cnt_1.pdf','‘내가 가진 가치 있는 것들로 여호와를 공경하리’'],
+['1014284_KO_cnt_1.pdf','내 모든 걸 드려요'],
+['1014280_KO_cnt_1.pdf','시험을 이겨 내서 행복해요'],
+['1014302_KO_cnt_1.pdf','바로 지금'],
+['1014282_KO_cnt_1.pdf','웃어요'],
+['1014278_KO_cnt_1.pdf','보물 찾기'],
+['1014292_KO_cnt_1.pdf','여호와의 품으로'],
+['1014274_KO_cnt_1.pdf','즐거운 대회'],
+['1014276_KO_cnt_1.pdf','가장 소중한 걸 드릴게요'],
+['1014286_KO_cnt_1.pdf','현명한 선택'],
+['1014272_KO_cnt_1.pdf','그날을 그려 보다'],
+['1014267_KO_cnt_1.pdf','발걸음을 나란히'],
+['1014263_KO_cnt_1.pdf','외국어를 배우면'],
+['1014265_KO_cnt_1.pdf','서두르지 말아요'],
+['1014256_KO_cnt_1.pdf','후대에 힘쓰십시오'],
+['1014244_KO_cnt_1.pdf','아버지께 감사합니다'],
+['1014238_KO_cnt_1.pdf','내가 있어야 할 곳'],
+['1014240_KO_cnt_1.pdf','나의 선택'],
+['1014223_KO_cnt_1.pdf','서로를 용서해요'],
+['1014225_KO_cnt_1.pdf','그날은 우리 눈앞에'],
+['1014229_KO_cnt_1.pdf','공부하면 튼튼해져요'],
+['1014226_KO_cnt_1.pdf','그 말씀은 영원해'],
+['1014214_KO_cnt_1.pdf','잠시 멈추어 기도해'],
+['1014215_KO_cnt_1.pdf','여호와와 함께 만들어 가는 나의 미래'],
+['1014227_KO_cnt_1.pdf','믿음이 있으면 할 수 있죠'],
+['1014216_KO_cnt_1.pdf','아버지의 말씀을 기억할게요'],
+['1014217_KO_cnt_1.pdf','다시 일어날게요'],
+['1014218_KO_cnt_1.pdf','한없이 놀라워'],
+['1014220_KO_cnt_1.pdf','소중한 딸'],
+['1014219_KO_cnt_1.pdf','앞을 보며 나아가자'],
+['1014232_KO_cnt_1.pdf','여길 봐'],
+['1014231_KO_cnt_1.pdf','하느님의 놀라운 일들'],
+['1014242_KO_cnt_1.pdf','중요한 것 앞자리에'],
+['1014234_KO_cnt_1.pdf','난 그대만을'],
+['1014236_KO_cnt_1.pdf','주를 찬양하는 이곳'],
+['1014246_KO_cnt_1.pdf','아버지를 신뢰합니다'],
+['1014248_KO_cnt_1.pdf','난 달라져 갈 거야'],
+['1014250_KO_cnt_1.pdf','언제나 내 곁에'],
+['1014254_KO_cnt_1.pdf','형제 사랑'],
+['1014252_KO_cnt_1.pdf','두렵지 않아'],
+['1014258_KO_cnt_1.pdf','진리를 찾아서'],
+['1014260_KO_cnt_1.pdf','진정한 친구'],
+['1014304_KO_cnt_1.pdf','내가 있잖아'],
+['1014298_KO_cnt_1.pdf','우리는 하나'],
+['1014269_KO_cnt_1.pdf','용기를 주소서'],
+['1014306_KO_cnt_1.pdf','내 모든 정성'],
+['1014309_KO_cnt_1.pdf','내일 염려는 내일로'],
+['1014307_KO_cnt_1.pdf','오늘도 그분의 힘으로'],
+['1014311_KO_cnt_1.pdf','난 정말 감사해'],
+['1014313_KO_cnt_1.pdf','우리는 한가족이죠'],
+['1014318_KO_cnt_1.pdf','믿음의 싸움'],
+['1014321_KO_cnt_1.pdf','늘 우리 곁엔 여호와'],
+['1014323_KO_cnt_1.pdf','낙원을 그리며'],
+['1014324_KO_cnt_1.pdf','당신께 드려요'],
+['1014320_KO_cnt_1.pdf','결코 없어지지 않는 사랑'],
+['1014325_KO_cnt_1.pdf','여호와께 내맡겨 봐'],
+['1014327_KO_cnt_1.pdf','아이처럼'],
+['1014328_KO_cnt_1.pdf','그 사랑을 확신해요'],
+['1014337_KO_cnt_1.pdf','마음으로 용서하도록'],
+['1014326_KO_cnt_1.pdf','힘차게 달리자'],
+['1014338_KO_cnt_1.pdf','계속 키워 갈 거야'],
+['1014333_KO_cnt_1.pdf','단 한 사람'],
+['1014346_KO_cnt_1.pdf','마음을 지킬게요'],
+['1014343_KO_cnt_1.pdf','‘항상 기뻐할래’'],
+['1014345_KO_cnt_1.pdf','하나로 연합된 우리'],
+['1014355_KO_cnt_1.pdf','네 젊음을 여호와 위해'],
+['1014339_KO_cnt_1.pdf','이 기쁨 영원히'],
+['1014344_KO_cnt_1.pdf','보게 될 거예요'],
+['1014354_KO_cnt_1.pdf','믿음의 눈으로'],
+]
+
+var display = document.getElementById("display")
+var titlelist = document.getElementById("titlelist")
+
+function show(filename) {
+  display.innerHTML = "<object data=\"" + filename + "#view=FitH\" type=\"application/pdf\" width=\"100%\" height=\"100%\">"
+}
+
+for (i = 0; i < songlist.length; i++) {
+  titlelist.innerHTML += "<li><button onClick=\"show('" + songlist[i][0] + "')\">" + songlist[i][1] + "</button></li>"
+}
+
+show(songlist[0][0])
+</script>
+</body>
+<html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Partituras</title>
+<style>
+div {
+  resize: horizontal;
+  overflow: auto;
+  border: 1px solid;
+  display: inline-flex;
+  height: 90vh;
+}
+</style>
+</head>
+<body>
+<h1>Partituras</h1>
+<p><a href="https://www.jw.org/es/biblioteca/musica-canciones/canciones-originales/" target="_blank">Canciones originales de jw.org</a></p>
+<div><ul id="titlelist"></ul></div>
+<div id="display" style="position: absolute; top: 100px; width: 70vw"></div>
+<script>
+var songlist = [
+['1014294_S_cnt_1.pdf','La vida más hermosa'],
+['1014296_S_cnt_1.pdf','Allí estaremos'],
+['1014316_S_cnt_1.pdf','Si fueras conmigo'],
+['1014290_S_cnt_1.pdf','¿Qué es lo más importante?'],
+['1014288_S_cnt_1.pdf','Fiel yo seré'],
+['1014300_S_cnt_1.pdf','Jehová, lo mejor es para ti'],
+['1014284_S_cnt_1.pdf','Mi vida entera te doy'],
+['1014280_S_cnt_1.pdf','Superé la prueba'],
+['1014302_S_cnt_1.pdf','Hoy es el día'],
+['1014282_S_cnt_1.pdf','Sonreír'],
+['1014278_S_cnt_1.pdf','Imaginarlo'],
+['1014292_S_cnt_1.pdf','Jehová te dice: “¡Vuelve a mí!”'],
+['1014274_S_cnt_1.pdf','Las asambleas nos hacen felices'],
+['1014276_S_cnt_1.pdf','Te entrego lo mejor de mí'],
+['1014286_S_cnt_1.pdf','Ten calma al decidir'],
+['1014272_S_cnt_1.pdf','Contemplo ese día'],
+['1014267_S_cnt_1.pdf','Estoy al día'],
+['1014263_S_cnt_1.pdf','Tú puedes dar el paso'],
+['1014265_S_cnt_1.pdf','No corras más'],
+['1014256_S_cnt_1.pdf','Sigue mostrando hospitalidad'],
+['1014244_S_cnt_1.pdf','Mil gracias, Jehová'],
+['1014238_S_cnt_1.pdf','Soy parte de tu nación'],
+['1014240_S_cnt_1.pdf','Mi decisión'],
+['1014223_S_cnt_1.pdf','Hay que perdonar'],
+['1014225_S_cnt_1.pdf','Muy cerca'],
+['1014229_S_cnt_1.pdf','Fuerte tú serás'],
+['1014226_S_cnt_1.pdf','Tu Palabra durará por siempre'],
+['1014214_S_cnt_1.pdf','Oye a Jehová'],
+['1014215_S_cnt_1.pdf','Mi futuro con Jehová'],
+['1014227_S_cnt_1.pdf','Paso a paso'],
+['1014216_S_cnt_1.pdf','Lo mejor'],
+['1014217_S_cnt_1.pdf','Me levantaré'],
+['1014218_S_cnt_1.pdf','Tus obras, Gran Jehová'],
+['1014220_S_cnt_1.pdf','Mi pequeña'],
+['1014219_S_cnt_1.pdf','Hay que avanzar'],
+['1014232_S_cnt_1.pdf','Mírame'],
+['1014231_S_cnt_1.pdf','Jehová, te quiero cantar'],
+['1014242_S_cnt_1.pdf','Lo principal'],
+['1014234_S_cnt_1.pdf','Amor de verdad'],
+['1014236_S_cnt_1.pdf','Un lugar que te honrará'],
+['1014246_S_cnt_1.pdf','Confiar en ti'],
+['1014248_S_cnt_1.pdf','Hoy voy a cambiar'],
+['1014250_S_cnt_1.pdf','Jamás me dejarás'],
+['1014254_S_cnt_1.pdf','Amor fraternal'],
+['1014252_S_cnt_1.pdf','Todo irá bien'],
+['1014258_S_cnt_1.pdf','Busca y hallarás'],
+['1014260_S_cnt_1.pdf','Un amigo fiel'],
+['1014304_S_cnt_1.pdf','Cuenta conmigo'],
+['1014298_S_cnt_1.pdf','Unidos por la verdad'],
+['1014269_S_cnt_1.pdf','Por ti seré valiente'],
+['1014306_S_cnt_1.pdf','Servirte me hace feliz'],
+['1014309_S_cnt_1.pdf','Cada día traerá su inquietud'],
+['1014307_S_cnt_1.pdf','No te dejes vencer'],
+['1014311_S_cnt_1.pdf','Gracias por ser nuestro Creador'],
+['1014313_S_cnt_1.pdf','Tú eres mi familia'],
+['1014318_S_cnt_1.pdf','Aguanta un poco más'],
+['1014321_S_cnt_1.pdf','Jehová jamás nos fallará'],
+['1014323_S_cnt_1.pdf','La vida de verdad'],
+['1014324_S_cnt_1.pdf','Te entregaré mi amor'],
+['1014320_S_cnt_1.pdf','Un amor sin final'],
+['1014325_S_cnt_1.pdf','Cuéntaselo'],
+['1014327_S_cnt_1.pdf','Como niños'],
+['1014328_S_cnt_1.pdf','Recuérdalo bien'],
+['1014337_S_cnt_1.pdf','Te perdono'],
+['1014326_S_cnt_1.pdf','Muévete'],
+['1014338_S_cnt_1.pdf','Ni un paso atrás'],
+['1014333_S_cnt_1.pdf','Mi dulce amor'],
+['1014346_S_cnt_1.pdf','Encuentra la paz'],
+['1014343_S_cnt_1.pdf','Siempre feliz'],
+['1014345_S_cnt_1.pdf','Una gran familia'],
+['1014355_S_cnt_1.pdf','Dile a Dios que sí'],
+['1014339_S_cnt_1.pdf','Mi mayor felicidad'],
+['1014344_S_cnt_1.pdf','Ya verás'],
+['1014354_S_cnt_1.pdf','Si tienes fe'],
+]
+
+var display = document.getElementById("display")
+var titlelist = document.getElementById("titlelist")
+
+function show(filename) {
+  display.innerHTML = "<object data=\"" + filename + "#view=FitH\" type=\"application/pdf\" width=\"100%\" height=\"100%\">"
+}
+
+for (i = 0; i < songlist.length; i++) {
+  titlelist.innerHTML += "<li><button onClick=\"show('" + songlist[i][0] + "')\">" + songlist[i][1] + "</button></li>"
+}
+
+show(songlist[0][0])
+</script>
+</body>
+<html>
