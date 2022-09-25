@@ -1,5 +1,5 @@
 # JWLeadSheets
-JW Lead Sheets (Partituras / 악보 / 主旋律谱版) no incluye las partituras.
+JW [Lead Sheets](README.md) (Partituras / 악보 / 主旋律谱版) no incluye las partituras.
 
 Solo lista y muestra los archivos PDF disponibles localmente en la misma carpeta, así que hay que descargar las partituras primero.
 
