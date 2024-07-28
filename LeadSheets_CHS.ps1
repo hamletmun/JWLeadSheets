@@ -1,5 +1,5 @@
 $LeadSheets = @("https://download-a.akamaihd.net/files/content_assets/96/1014294_CHS_cnt_1.pdf",
-# 1014296 We Won’t Forget You
+"https://download-a.akamaihd.net/files/content_assets/c1/1014296_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/f5/1014316_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/4e/1014290_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/43/1014288_CHS_cnt_1.pdf",
@@ -9,11 +9,11 @@ $LeadSheets = @("https://download-a.akamaihd.net/files/content_assets/96/1014294
 "https://download-a.akamaihd.net/files/content_assets/38/1014302_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/4e/1014282_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/9c/1014278_CHS_cnt_1.pdf",
-# 1014292 Jehovah Welcomes You Home
+"https://download-a.akamaihd.net/files/content_assets/17/1014292_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/11/1014274_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/21/1014276_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/aa/1014272_CHS_cnt_1.pdf",
-# 1014286 Take Your Time, Choose Wisely
+"https://download-a.akamaihd.net/files/content_assets/ad/1014286_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/41/1014263_CHS_cnt_1.pdf",
 # 1014267 Keep the Pace
 "https://download-a.akamaihd.net/files/content_assets/3a/1014265_CHS_cnt_1.pdf",
@@ -71,7 +71,28 @@ $LeadSheets = @("https://download-a.akamaihd.net/files/content_assets/96/1014294
 "https://download-a.akamaihd.net/files/content_assets/ee/1014355_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/40/1014339_CHS_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/3f/1014344_CHS_cnt_1.pdf",
-"https://download-a.akamaihd.net/files/content_assets/ab/1014354_CHS_cnt_1.pdf")
+"https://download-a.akamaihd.net/files/content_assets/a7/1014332_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/ab/1014354_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/57/1014348_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/30/1014363_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/6c/1014366_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/b3/1014365_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/f8/1014368_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/93/1014358_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/80/1014372_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/7c/1014367_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/49/1014375_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/86/1014381_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/58/1014380_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/7d/1014373_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/0e/1014374_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/15/1014385_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/39/1014386_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/14/1014391_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/72/1014389_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/ee/1014392_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/cc/1014398_CHS_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/26/1014395_CHS_cnt_1.pdf")
 
 foreach ($Sheet in $LeadSheets) {
     Invoke-WebRequest $Sheet -OutFile $(Split-Path -Path $Sheet -Leaf)

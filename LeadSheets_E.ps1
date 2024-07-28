@@ -71,7 +71,28 @@ $LeadSheets = @("https://download-a.akamaihd.net/files/content_assets/7c/1014294
 "https://download-a.akamaihd.net/files/content_assets/83/1014355_E_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/4f/1014339_E_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/21/1014344_E_cnt_1.pdf",
-"https://download-a.akamaihd.net/files/content_assets/3b/1014354_E_cnt_1.pdf")
+"https://download-a.akamaihd.net/files/content_assets/0a/1014332_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/3b/1014354_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/68/1014348_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/8a/1014363_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/95/1014366_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/52/1014365_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/1d/1014368_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/22/1014358_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/49/1014372_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/bc/1014367_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/61/1014375_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/a7/1014381_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/25/1014380_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/0f/1014373_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/eb/1014374_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/4b/1014385_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/85/1014386_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/9e/1014391_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/4c/1014389_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/b2/1014392_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/25/1014398_E_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/ea/1014395_E_cnt_1.pdf")
 
 foreach ($Sheet in $LeadSheets) {
     Invoke-WebRequest $Sheet -OutFile $(Split-Path -Path $Sheet -Leaf)

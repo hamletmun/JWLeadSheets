@@ -71,7 +71,28 @@ $LeadSheets = @(# 1014294 The Best Life Ever
 "https://download-a.akamaihd.net/files/content_assets/9e/1014355_KO_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/7b/1014339_KO_cnt_1.pdf",
 "https://download-a.akamaihd.net/files/content_assets/4d/1014344_KO_cnt_1.pdf",
-"https://download-a.akamaihd.net/files/content_assets/44/1014354_KO_cnt_1.pdf")
+"https://download-a.akamaihd.net/files/content_assets/5b/1014332_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/44/1014354_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/4e/1014348_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/56/1014363_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/07/1014366_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/11/1014365_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/75/1014368_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/20/1014358_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/2c/1014372_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/5f/1014367_KO_cnt_1.pdf",
+# 1014375 나에게 다가오렴
+"https://download-a.akamaihd.net/files/content_assets/62/1014381_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/cd/1014380_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/59/1014373_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/30/1014374_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/82/1014385_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/cf/1014386_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/96/1014391_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/01/1014389_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/7d/1014392_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/01/1014398_KO_cnt_1.pdf",
+"https://download-a.akamaihd.net/files/content_assets/31/1014395_KO_cnt_1.pdf")
 
 foreach ($Sheet in $LeadSheets) {
     Invoke-WebRequest $Sheet -OutFile $(Split-Path -Path $Sheet -Leaf)
